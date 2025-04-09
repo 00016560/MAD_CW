@@ -7,8 +7,8 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="product_delete_confirmation">Are you sure you want to delete %1$s?</string>
-    <string name="purchasePrice">Purchase price: %1$s</string>
-    <string name="sellingPrice">Selling price: %1$s</string>
+    <string name="purchasePrice">Purchase price:</string>
+    <string name="sellingPrice">Selling price: </string>
     <string name="brand">Brand: %1$s</string>
     <string name="product_name">Product name</string>
     <string name="size">Size</string>
