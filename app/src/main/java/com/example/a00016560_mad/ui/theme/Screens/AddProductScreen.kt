@@ -22,7 +22,10 @@ import kotlinx.coroutines.launch
 
 
     @Composable
-    fun AddProductScreen(navController: NavController) {
+    fun AddProductScreen(
+        viewModel: ProductViewModel = viewModel(),
+        navController: NavController
+    ) {
         val localContext = LocalContext.current
         val productAdditionScope = rememberCoroutineScope()
 
@@ -37,8 +40,6 @@ import kotlinx.coroutines.launch
         var productQuantity by remember { mutableStateOf("") }
         var productPurchasePrice by remember { mutableStateOf("") }
         var productSellingPrice by remember { mutableStateOf("") }
-
-        val viewModel: ProductViewModel = viewModel()
 
         Column(
             modifier = Modifier

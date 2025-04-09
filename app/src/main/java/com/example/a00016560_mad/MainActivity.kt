@@ -79,10 +79,10 @@ class MainActivity : ComponentActivity() {
                         paddingValues = innerPaddings,
                         modifier = Modifier.fillMaxSize(),
                     )
-                    viewModel.toast.value?.let { message ->
+                    viewModel.toastMessage.value?.let { message ->
                         scope.launch {
                             Toast.makeText(this@MainActivity, message, Toast.LENGTH_SHORT).show()
-                            viewModel.toast.value = null
+                            viewModel.toastMessage.value = null
                         }
                     }
                 }
