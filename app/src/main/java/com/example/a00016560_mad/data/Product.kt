@@ -12,5 +12,5 @@ data class Product(
     @SerializedName("integer_one") val quantity: Int,
     @SerializedName("double_one") val purchasePrice: Double,
     @SerializedName("price") val sellingPrice: Double,
-    @SerializedName("description") val description: String? = null
+    @SerializedName("description") val description: String
 )

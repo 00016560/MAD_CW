@@ -16,11 +16,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.a00016560_mad.R
-import com.example.a00016560_mad.data.Product
-import com.example.a00016560_mad.data.remote.ProductApi
 import com.example.a00016560_mad.data.remote.ProductRequest
-import com.example.a00016560_mad.data.remote.RetrofitInstance
-import com.example.a00016560_mad.data.repository.ProductRepository
 import com.example.a00016560_mad.ui.theme.ProductViewModel
 import kotlinx.coroutines.launch
 
@@ -147,6 +143,7 @@ import kotlinx.coroutines.launch
                             quantity = productQuantity.toIntOrNull() ?: 0,
                             purchasePrice = productPurchasePrice.toDoubleOrNull() ?: 0.0,
                             sellingPrice = productSellingPrice.toDoubleOrNull() ?: 0.0,
+                            description = productName
                         )
                         try {
                             viewModel.addProduct(newProduct)

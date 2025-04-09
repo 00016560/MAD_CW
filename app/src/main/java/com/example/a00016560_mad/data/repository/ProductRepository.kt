@@ -22,6 +22,7 @@ class ProductRepository {
                 sellingPrice = product.sellingPrice,
                 purchasePrice = product.purchasePrice,
                 quantity = product.quantity,
+                description = product.description
             )
         }
     }
