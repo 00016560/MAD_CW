@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
@@ -20,6 +21,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
@@ -33,7 +35,9 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.a00016560_mad.ui.theme.ProductViewModel
 
+
 @Composable
+
 fun ProductCard(
     product: Product,
     onProductClick: () -> Unit,
@@ -91,11 +95,14 @@ fun ProductListScreen(
     viewModel: ProductViewModel,
     paddingValues: PaddingValues
 ) {
-    val products = viewModel.products
-    LazyColumn(modifier = Modifier
-        .fillMaxSize()
-        .padding(paddingValues)) {
-        itemsIndexed(products, itemContent = { index, item ->
+    val products by viewModel.products.collectAsState()
+
+    LazyColumn(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(paddingValues)
+    ) {
+        items(products) { item ->
             ProductCard(
                 product = item,
                 onProductClick = {
@@ -109,7 +116,8 @@ fun ProductListScreen(
                 },
                 onQuantityChange = { quantity ->
                     viewModel.updateQuantity(item.id, quantity)
-                })
-        })
+                }
+            )
+        }
     }
 }

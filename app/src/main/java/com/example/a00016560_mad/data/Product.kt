@@ -9,7 +9,7 @@ data class Product(
     @SerializedName("double_two") val sample: Double,
     @SerializedName("double_list") val weight: Double,
     @SerializedName("type") val category: String,
-    @SerializedName("integer_one") val quantity: Int,
+    @SerializedName("integer_one") var quantity: Int,
     @SerializedName("double_one") val purchasePrice: Double,
     @SerializedName("price") val sellingPrice: Double,
     @SerializedName("description") val description: String
