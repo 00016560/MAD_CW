@@ -21,6 +21,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
@@ -54,7 +55,9 @@ class MainActivity : ComponentActivity() {
                     },
                     modifier = Modifier.fillMaxSize(),
                     bottomBar = {
-                        BottomNavigation {
+                        BottomNavigation(
+                            backgroundColor = colorResource(R.color.purple_500)
+                        ) {
                             val navBackStackEntry by navController.currentBackStackEntryAsState()
                             val currentRoute = navBackStackEntry?.destination?.route
 

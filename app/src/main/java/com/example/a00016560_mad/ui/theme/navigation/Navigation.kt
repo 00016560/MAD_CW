@@ -49,7 +49,7 @@ fun NavigationScreens(
         }
 
         composable(Screen.CreateProduct.route) {
-            AddProductScreen(viewModel, navController)
+            AddProductScreen(viewModel, navController, paddingValues)
         }
         composable(Screen.UpdateProduct.route) { backStackEntry ->
             val productId = backStackEntry.arguments?.getString("productId")?.toIntOrNull() ?: 0

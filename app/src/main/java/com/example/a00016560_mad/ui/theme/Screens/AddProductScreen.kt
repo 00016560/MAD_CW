@@ -2,7 +2,9 @@ package com.example.a00016560_mad.ui.theme.Screens
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -24,7 +26,8 @@ import kotlinx.coroutines.launch
     @Composable
     fun AddProductScreen(
         viewModel: ProductViewModel = viewModel(),
-        navController: NavController
+        navController: NavController,
+        paddingValues: PaddingValues
     ) {
         val localContext = LocalContext.current
         val productAdditionScope = rememberCoroutineScope()
@@ -43,14 +46,15 @@ import kotlinx.coroutines.launch
 
         Column(
             modifier = Modifier
-                .fillMaxSize()
                 .background(Color(0xFFF3E5F5)) // Light purple background
-                .padding(16.dp),
+                .padding(64.dp)
+                .verticalScroll(rememberScrollState()), // Add this line for scrolling
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text("PRODUCT DESCRIPTION", fontSize = 22.sp, color = Color(0xFF6A1B9A))
 
-            Spacer(modifier = Modifier.height(16.dp))
+
+            Spacer(modifier = Modifier.height(32.dp))
 
             // Input fields
             OutlinedTextField(
@@ -159,7 +163,7 @@ import kotlinx.coroutines.launch
                         }
                     }
                 },
-                colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF6A1B9A)),
+                colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFCBBC1C)),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("ADD NEW PRODUCT", color = Color.White, fontSize = 18.sp)
@@ -169,7 +173,7 @@ import kotlinx.coroutines.launch
 
             Button(
                 onClick = { navController.navigate("product_list") },
-                colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF6A1B9A)),
+                colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFCBBC1C)),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(stringResource(R.string.view_product_list), color = Color.White, fontSize = 18.sp)
