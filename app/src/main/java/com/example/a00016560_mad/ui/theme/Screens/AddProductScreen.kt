@@ -60,14 +60,14 @@ import kotlinx.coroutines.launch
             OutlinedTextField(
                 value = productName,
                 onValueChange = { productName = it },
-                label = { Text("Product Name") },
+                label = { Text(stringResource(R.string.product_name)) },
                 modifier = Modifier.fillMaxWidth()
             )
 
             OutlinedTextField(
                 value = productSize,
                 onValueChange = { productSize = it },
-                label = { Text("Size") },
+                label = { Text(stringResource(R.string.size)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 modifier = Modifier.fillMaxWidth()
             )
@@ -75,14 +75,14 @@ import kotlinx.coroutines.launch
             OutlinedTextField(
                 value = productBrand,
                 onValueChange = { productBrand = it },
-                label = { Text("Brand") },
+                label = { Text(stringResource(R.string.brand_name)) },
                 modifier = Modifier.fillMaxWidth()
             )
 
             OutlinedTextField(
                 value = productSample,
                 onValueChange = { productSample = it },
-                label = { Text("Sample") },
+                label = { Text(stringResource(R.string.sample)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 modifier = Modifier.fillMaxWidth()
             )
@@ -90,7 +90,7 @@ import kotlinx.coroutines.launch
             OutlinedTextField(
                 value = productWeight,
                 onValueChange = { productWeight = it },
-                label = { Text("Weight") },
+                label = { Text(stringResource(R.string.weight)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 modifier = Modifier.fillMaxWidth()
             )
@@ -98,21 +98,21 @@ import kotlinx.coroutines.launch
             OutlinedTextField(
                 value = productCategory,
                 onValueChange = { productCategory = it },
-                label = { Text("Category") },
+                label = { Text(stringResource(R.string.category)) },
                 modifier = Modifier.fillMaxWidth()
             )
 
             OutlinedTextField(
                 value = productMaterial,
                 onValueChange = { productMaterial = it },
-                label = { Text("Material") },
+                label = { Text(stringResource(R.string.material)) },
                 modifier = Modifier.fillMaxWidth()
             )
 
             OutlinedTextField(
                 value = productQuantity,
                 onValueChange = { productQuantity = it },
-                label = { Text("Quantity") },
+                label = { Text(stringResource(R.string.quantity)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 modifier = Modifier.fillMaxWidth()
             )
@@ -120,7 +120,7 @@ import kotlinx.coroutines.launch
             OutlinedTextField(
                 value = productPurchasePrice,
                 onValueChange = { productPurchasePrice = it },
-                label = { Text("Purchase Price") },
+                label = { Text(stringResource(R.string.purchasePrice)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 modifier = Modifier.fillMaxWidth()
             )
@@ -128,7 +128,7 @@ import kotlinx.coroutines.launch
             OutlinedTextField(
                 value = productSellingPrice,
                 onValueChange = { productSellingPrice = it },
-                label = { Text("Selling Price") },
+                label = { Text(stringResource(R.string.sellingPrice)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 modifier = Modifier.fillMaxWidth()
             )

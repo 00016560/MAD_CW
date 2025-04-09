@@ -10,6 +10,14 @@
     <string name="purchasePrice">Purchase price: %1$s</string>
     <string name="sellingPrice">Selling price: %1$s</string>
     <string name="brand">Brand: %1$s</string>
+    <string name="product_name">Product name</string>
+    <string name="size">Size</string>
+    <string name="brand_name">Brand</string>
+    <string name="sample">Sample</string>
+    <string name="weight">Weight</string>
+    <string name="category">Category</string>
+    <string name="material">Material</string>
+    <string name="quantity">Quantity</string>
 
 
 
