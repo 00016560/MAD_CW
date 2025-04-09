@@ -88,4 +88,3 @@ class ProductViewModel(
             _errorMessage.value = null
         }
     }
-}
